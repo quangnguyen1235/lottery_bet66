@@ -1,0 +1,36 @@
+final Map<String, String> viVN = {
+  'login': 'Đăng nhập',
+  'register': 'Đăng ký',
+  'phone_num':'Số điện thoại',
+  'password':'Mật khẩu',
+  'register_name':'Họ tên',
+  're_password':'Nhập lại mật khẩu',
+
+  'dashboard_home':'Trang chủ',
+  'dashboard_clone':'Clone',
+  'dashboard_action':'Action',
+  'dashboard_clone_setting':'Cấu hình clone bị chặn',
+  'dashboard_device':'Thiết bị',
+  'dashboard_page':'Trang',
+  'dashboard_friend':'Bạn bè',
+  'dashboard_group':'Nhóm',
+  'dashboard_money':'Kiếm tiền',
+  'dashboard_finance':'Tài chính',
+  'dashboard_gift_code':'Quà tặng',
+  'dashboard_support':'Trợ gíúp',
+  'dashboard_profile':'Tài khoản',
+  'dashboard_logout':'Đăng xuất',
+
+  'function_is_developing':'Chức năng đang phát triển',
+  'home_regular':'Quy định',
+  'home_regular_content':'Hệ thống của chúng tôi cung cấp nhiều cấp độ nạp tiền khác nhau để giúp khách hàng trải nghiệm hệ thống\nĐể đảm bảo chất lượng trải nghiệm, chúng tôi có phiên bản miễn phí (có tính năng tương đương) cho khách hàng sử dụng\nChúng tôi không có chính sách HOÀN TIỀN nên bạn nên cân nhắc trải nghiệm phiên bản miễn phí trước khi gửi tiền\nTrân trọng!',
+  'home_recharge':'Nạp tiền',
+  'home_make_money':'Kiếm tiền',
+  'home_profile':'Hồ sơ',
+  'home_download':'Tải xuống',
+  'home_recharge_now':'Nạp tiền ngay',
+
+  'home_profile_name':'Họ tên',
+  'home_profile_account':'Tên tài khoản',
+
+};
