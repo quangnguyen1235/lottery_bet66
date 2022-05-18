@@ -1,10 +1,11 @@
+import 'package:dio/browser_imp.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/native_imp.dart';
 import 'package:logger/logger.dart';
 import '../configs/configs.dart';
 import 'utils.dart';
 
-class AppClients extends DioForNative {
+class AppClients extends DioForBrowser {
   static const String GET = "GET";
   static const String POST = "POST";
   static const String PUT = "PUT";

@@ -1,15 +1,16 @@
 import 'dart:convert';
 import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import '../../configs/configs.dart';
+// import '../../configs/configs.dart';
 
 class NetworkState<T> {
-  int? status;
+  int? code;
+  int? time;
   String? message;
   T? data;
 
-  NetworkState({this.message, this.data, this.status});
+  NetworkState({this.message, this.data, this.code, this.time});
 
   factory NetworkState.fromResponse(Response response, {converter, value, String? prefix}) {
     try {
@@ -22,8 +23,9 @@ class NetworkState<T> {
   }
 
   NetworkState._fromJson(dynamic json, {converter, value, String? prefix}) {
-    status = json['status'];
-    message = json['message'];
+    code = json['code'];
+    time = json['time'];
+    message = json['msg'];
     if (value != null)
       data = value;
     else if (prefix != null) {
@@ -38,16 +40,18 @@ class NetworkState<T> {
   }
 
   NetworkState.fromJson(Map<String, dynamic> json) {
-    this.message = json['message'];
-    this.status = json['status'];
+    this.message = json['msg'];
+    this.code = json['code'];
     this.data = json['data'];
+    this.time = json['time'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['message'] = this.message;
-    data['status'] = this.status;
+    data['msg'] = this.message;
+    data['code'] = this.code;
     data['data'] = this.data;
+    data['time'] = this.time;
     return data;
   }
 
@@ -63,21 +67,23 @@ class NetworkState<T> {
       message = "Không thể kết nối đến máy chủ!";
     }
     this.message = message;
-    this.status = code;
+    this.code = code;
     this.data = null;
+    this.time = null;
   }
 
   NetworkState.withDisconnect() {
-    this.message = "Mất kết nối internet, vui lòng kiểm tra wifi/3g và thử lại!";
-    this.status = AppEndpoint.ERROR_DISCONNECT;
+    message = "Mất kết nối internet, vui lòng kiểm tra wifi/3g và thử lại!";
+    this.code = AppEndpoint.ERROR_DISCONNECT;
     this.data = null;
+    this.time = null;
   }
 
   NetworkState.withErrorConvert(error) {
     this.data = null;
   }
 
-  bool get isSuccess => status == AppEndpoint.SUCCESS;
+  bool get isSuccess => code == AppEndpoint.SUCCESS;
 
-  bool get isError => status != AppEndpoint.SUCCESS;
+  bool get isError => code != AppEndpoint.SUCCESS;
 }

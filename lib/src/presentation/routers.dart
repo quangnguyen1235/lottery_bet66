@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/src/configs/configs.dart';
+import 'package:flutter_app/src/presentation/presentation.dart';
 import '../resource/services/services.dart';
 
 class Routers {
-  static const String register = "/register";
+  static const String special_number = "/special_number";
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     var routingData = settings.name!.getRoutingData;
     switch (routingData.route) {
+      case special_number:
+        return animRoute(SpecialNumberScreen(), name: settings.name!, arguments: routingData.queryParameters);
       default:
         return animRoute(
           Scaffold(
