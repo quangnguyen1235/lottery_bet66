@@ -56,6 +56,8 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     print("ChangeAppLifecycleState: $state");
   }
 
+  //text
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
