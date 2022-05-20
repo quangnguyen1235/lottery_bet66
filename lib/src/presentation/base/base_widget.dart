@@ -9,8 +9,8 @@ import 'base_viewmodel.dart';
 class BaseWidget<T extends BaseViewModel> extends StatefulWidget {
   /*
     child, childDesktop, childMobile, childTablet:
-    Its widget not listen on consumer
-    Use to paint to widget not change(Appbar, background....)
+    Its widgets not listen on consumer
+    Use to paint to widgets not change(Appbar, background....)
    */
   final Widget? child;
   final Widget? childDesktop;

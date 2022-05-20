@@ -74,11 +74,27 @@ class SpecialNumberViewModel extends BaseViewModel {
             'count': count,
           });
 
-          // listRepeat.sort((a,b) => a['num'].compareTo(b['num']));
+          listRepeat.sort((a,b) => a['num'].compareTo(b['num']));
         }
       }
     }
 
     return listRepeat;
+  }
+
+  List<int> takeNumbersBySum({required int sum, required List<int> numbers}){
+    List<int> result = [];
+    for(var num in numbers){
+      var temp = int.parse(num.toString());
+      int sumOfNum = 0;
+      late int splitNum;
+      while(temp != 0){
+        splitNum = temp % 10;
+        sumOfNum += splitNum;
+        temp = temp ~/ 10;
+      }
+      if(sum == sumOfNum) result.add(num);
+    }
+    return result;
   }
 }

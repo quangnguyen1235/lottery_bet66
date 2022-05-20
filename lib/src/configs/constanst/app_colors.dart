@@ -6,9 +6,9 @@ class AppColors {
 
   static Color get primary => AppUtils.valueByMode(values: [primaryDark, primaryLight]);
 
-  static Color get primaryDark => fromHex('#F5F6FA');
+  static Color get primaryDark => fromHex('#F2F2F2');
 
-  static Color get primaryLight => fromHex('#F5F6FA');
+  static Color get primaryLight => fromHex('#F2F2F2');
 
   static Color get text => fromHex('#707070');
 

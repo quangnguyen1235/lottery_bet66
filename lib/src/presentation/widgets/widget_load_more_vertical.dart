@@ -18,7 +18,7 @@ typedef Widget ItemBuilder<T>(List<T> data, BuildContext context, int index);
       initRequester: _viewModel.initRequester)
 
     ===== ViewModel =====
-    //Key for manage state in widget
+    //Key for manage state in widgets
     final GlobalKey<WidgetLoadMoreWrapVerticalState> keyLoadMoreWrapVertical = GlobalKey();
 
     Future<List<ForumPostModel>> initRequester() async {

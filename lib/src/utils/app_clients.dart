@@ -5,7 +5,8 @@ import 'package:logger/logger.dart';
 import '../configs/configs.dart';
 import 'utils.dart';
 
-class AppClients extends DioForBrowser {
+class AppClients extends DioForNative {
+
   static const String GET = "GET";
   static const String POST = "POST";
   static const String PUT = "PUT";
