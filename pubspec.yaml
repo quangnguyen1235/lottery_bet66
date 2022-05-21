@@ -53,7 +53,7 @@ dependencies:
   equatable: ^2.0.3
   supercharged: ^2.1.1
   flutter_spinkit: ^5.1.0
-  keyboard_dismisser: ^2.0.1
+  keyboard_dismisser: ^3.0.0
   flutter_keyboard_visibility: ^5.2.0
   url_strategy: ^0.2.0
   url_launcher: ^6.1.2
@@ -61,6 +61,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+#  http:
 
 flutter:
   uses-material-design: true
